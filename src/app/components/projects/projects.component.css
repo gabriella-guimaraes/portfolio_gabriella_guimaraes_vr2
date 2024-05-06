@@ -1,0 +1,213 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 7rem;
+    height: auto;
+    gap: 5rem;
+    will-change: transform, opacity;
+    overflow: hidden;
+    max-width: max-content;
+    color: var(--bg-primary)
+}
+
+h1 {
+    font-weight: 800;
+    /* color: var(--text-dark); */
+    font-size: 64px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 1.75rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1.75rem;
+}
+
+.description, .location {
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+    margin: 10px 0 50px 0;
+}
+
+img {
+    width: 400px;
+    max-width: 100%;
+    /* height: 90%; */
+    padding: 1rem;
+}
+
+.badge {
+    padding: 1rem;
+    margin-right: 30px;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background: linear-gradient(
+        130deg,
+        #e07061da 8%,
+        #a57cd8e7 30%,
+        #7474ede7 67%
+    );
+    backdrop-filter: blur(80px);
+    --webkit-backdrop-filter: blur(80px);
+    color: var(--text-light);
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+    /* max-width: 60%; */
+}
+
+.badges {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 10px;
+    max-width: inherit;        
+}
+
+.Project-description {
+    padding: 1rem;
+    /* max-width: 70%; */
+}
+
+.Project-Card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: var(--bg-gray-transparent);
+    border-radius: 30px;
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+    height: fit-content;
+    border: 1px solid #CBCBDE;
+    transition: 0.5s;
+}
+
+.Project-Card:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 1px 1px 30px 0px rgba(203,203,222,0.33);
+    -moz-box-shadow: 1px 1px 30px 0px rgba(203,203,222,0.33);
+    box-shadow: 1px 1px 30px 0px rgba(203,203,222,0.33);
+    border-radius: 30px;
+    height: fit-content;
+}
+
+.Card-Link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-light);
+    height: fit-content;
+}
+
+p {
+    text-align: justify;
+}
+
+.Coming-Soon-Projects-text {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.Coming-Soon-Projects {
+    margin-bottom: 5rem;
+    a {
+        color: var(--bg-dark-theme-purple);
+        cursor: pointer;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    a:hover {
+        transform: scale(1.2);
+        color: var(--bg-blue);
+    }
+}
+
+.Project-description {
+    a {
+        color: var(--bg-dark-theme-purple);
+        cursor: pointer;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    a:hover {
+        transform: scale(1.2);
+        color: var(--bg-blue);
+    }
+}
+
+@media (max-width: 800px){
+
+    .Project-description {
+        width: 263px;
+        padding: 1rem;
+        height: fit-content;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .badges {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 10px;
+        max-width: inherit;
+    }
+
+    .badge {
+        margin-right: 0px;
+        max-width: fit-content;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px){
+    .Container {
+        padding: 2rem 2rem;
+        height: fit-content;
+    }
+
+    .Project-Card, .Card-Link {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Project-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    .badges {
+        grid-template-columns: auto auto;
+        max-width: inherit;
+    }
+
+    .badge {
+        margin-right: 0px;
+        max-width: fit-content;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}

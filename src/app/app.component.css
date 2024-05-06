@@ -1,0 +1,215 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    min-height: 100vh;
+    will-change: transform, opacity;
+}
+
+.stars-bg {
+    background-image: url('/assets/stars_bg.jpeg');
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-position: center;
+}
+
+.spacer {
+    margin: 20px 0;
+    height: 5px;
+}
+
+.NavBar {
+    
+    a {
+        text-decoration: none;
+    }
+    
+    nav {
+        /* max-width: 1200px; */
+        margin: auto;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        height: 80px;
+    }
+    
+    .nav-logo{
+        max-width: 100px;
+        h1{
+            font-weight: 600;
+            color: var(--text-light);
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+    
+    .nav-links{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    button {
+        background-color: #cbcbde00;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--bg-dark-theme-purple);
+        transition: .3s;
+    }
+
+    button:hover {
+        transform: scale(1.2);
+        color: var(--text-light);
+    }
+    
+    @media (max-width: 768px){
+        .nav-links{
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: baseline;
+            gap: 2rem;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: var(--bg-primary);
+            width: 100%;
+            height: 0;
+            overflow-y: hidden;
+            visibility: hidden;
+            transition: .6s;
+        }
+    
+        .nav-links.active{
+            display: flex;
+            visibility: visible;
+            height: calc(100vh - 80px);
+        }
+    
+        .nav-links.active li{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    
+        span {
+            border-top: 2px solid;
+            width: 25px;
+            color: var(--text-light);
+            display: block;
+            cursor: pointer;
+        }
+    
+        span::before, span::after{
+            content: '';
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color:currentColor;
+            transition: .3s;
+            margin-top: 5px;
+            position: relative;
+        }
+    
+        span.active {
+            border-top: transparent;
+        }
+    
+        span.active::before{
+            transform: rotate(135deg);
+        }
+    
+        span.active::after{
+            transform: rotate(-135deg);
+            top: -7px;
+        }
+    
+    
+    }
+}
+
+/* .first_section{
+    background: radial-gradient(
+        circle at right,
+        #e0706162 8%,
+        #a57cd88c 20%,
+        #7474ed81 27%,
+        #CBCBDE 50%,
+        #DDE4F5 72%
+    );
+    backdrop-filter: blur(80px);
+    --webkit-backdrop-filter: blur(80px);
+    
+} */
+
+.third_section{
+    /* background: radial-gradient(
+        circle at left,
+        #e0706162 8%,
+        #a57cd88c 20%,
+        #7474ed81 27%,
+        #CBCBDE 50%,
+        #DDE4F5 72%
+    );
+    backdrop-filter: blur(80px);
+    --webkit-backdrop-filter: blur(80px); */
+    
+    height: auto;
+    padding: 0 4rem;
+}
+
+.fourth_section {
+    /* background: radial-gradient(
+        circle at right,
+        #e0706162 8%,
+        #a57cd88c 20%,
+        #7474ed81 27%,
+        #CBCBDE 50%,
+        #DDE4F5 72%
+    );
+    backdrop-filter: blur(80px);
+    --webkit-backdrop-filter: blur(80px); */
+    background-color: #DDE4F5;
+    height: auto;
+    padding: 0 4rem;
+}
+
+.fifth_section {
+    /* background: radial-gradient(
+        circle at bottom,
+        #e0706162 8%,
+        #a57cd88c 20%,
+        #7474ed81 27%,
+        #CBCBDE 50%,
+        #DDE4F5 72%
+    );
+    backdrop-filter: blur(80px);
+    --webkit-backdrop-filter: blur(80px); */
+    height: auto;
+    padding: 0 4rem;
+}
+
+.sixth_section {
+    /* background: radial-gradient(
+        circle at top,
+        #e0706162 8%,
+        #a57cd88c 20%,
+        #7474ed81 27%,
+        #CBCBDE 50%,
+        #DDE4F5 72%
+    );
+    backdrop-filter: blur(80px);
+    --webkit-backdrop-filter: blur(80px); */
+    height: auto;
+    padding: 0 4rem;
+}
+
+@media (max-width: 768px){
+    .third_section, .fourth_section, .fifth_section, .sixth_section {
+        padding: 0;
+    }
+}
